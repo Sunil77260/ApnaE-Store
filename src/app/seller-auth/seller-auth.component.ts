@@ -15,7 +15,9 @@ export class SellerAuthComponent implements OnInit {
   singUp(item:object){
     
     console.log(item)
-    this.seller.userSingUp()
+    this.seller.userSingUp(item).subscribe((result:any)=>{
+      console.warn(result)
+    })
   }
 
 }
